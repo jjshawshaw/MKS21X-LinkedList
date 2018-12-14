@@ -6,5 +6,6 @@ public class Driver{
     System.out.println(L);
     L.add(4);
     System.out.println(L);
+    System.out.println(L.get(1));
   }
 }

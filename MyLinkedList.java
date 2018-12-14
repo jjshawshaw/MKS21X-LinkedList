@@ -43,13 +43,18 @@ class MyLinkedList{
  }
 
  public Integer get(int index) {
-   return 0;
- }
+    return getNth(index).getData();
+  }
+  
  public Integer set(int index,Integer value){
    return 0;
  }
  private Node getNth(int index){
-   return start;
+   Node current = start;
+    for (int i = index; i > 0; i--){
+        current = current.next();
+     }
+  return current;
  }
  public boolean contains(Integer value){
    return false;
