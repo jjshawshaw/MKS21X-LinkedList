@@ -18,11 +18,30 @@ class MyLinkedList{
 
 //Incomplete methods
  public boolean add(int value){
-   return false;
+   if (length == 0){
+     end = new Node(value, null, null);
+     start = end;
+     length++;
+   }
+   else {
+     Node temp = new Node(value, null, end);
+     end.setNext(temp);
+     end = temp;
+     length++;
+   }
+   return true;
  }
+
  public String toString(){
-   return "";
+   Node current = start;
+   String out = "";
+   while (current != null){
+     out += current + " ";
+     current = current.next();
+   }
+   return out;
  }
+
  public Integer get(int index) {
    return 0;
  }
@@ -37,8 +56,8 @@ class MyLinkedList{
  }
  public void add(int index,Integer value){
  }
- public Integer remove(int index) {
-   return 0;
+ public boolean remove(int index) {
+   return false;
  }
  public boolean remove(Integer value){
    return false;
@@ -70,7 +89,7 @@ class MyLinkedList{
    public Integer getData(){
      return data;
    }
-   public Integer setData(Integer i){
+   public void setData(Integer i){
      data = i;
    }
    public String toString(){
