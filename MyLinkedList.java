@@ -85,6 +85,7 @@ class MyLinkedList{
      Node newN = new Node(value, start, null);
      start.setPrev(newN);
      start = newN;
+     length++;
    }
    else if (index == length){
      add(value);
@@ -94,14 +95,32 @@ class MyLinkedList{
      Node newN = new Node(value, oldN, oldN.prev());
      oldN.prev().setNext(newN);
      oldN.setPrev(newN);
+     length++;
 
    }
  }
  public boolean remove(int index) {
-   return false;
+   if (index < 0 || length < index) return false;
+   if (index == 0){
+     start.next.setPrev(null);
+     start = start.next();
+     length--;
+   }
+   else if (index == length - 1){
+     end.prev.setNext(null);
+     end = end.prev();
+     length--;
+   }
+   else {
+     Node n = getNth(index);
+     n.prev.setNext(n.next());
+     n.next.setPrev(n.prev());
+     length--;
+   }
+   return true;
  }
  public boolean remove(Integer value){
-   return false;
+   return remove(indexOf(value));
  }
 
  //Node class

@@ -88,27 +88,27 @@ public class AditiDriver {
     System.out.println("Add 5 to the 3rd index: " + list);
     System.out.println();
 
-    // System.out.println("---- Testing remove methods ----");
-    // System.out.println();
-    // System.out.println("Current list: " + list);
-    // System.out.println("Remove 0th index should print 0: " + list.remove(0));
-    // System.out.println("Current list: " + list);
-    // System.out.print("Removing -1th index, should print an error: ");
-    // try {
-    //   list.remove(-1);
-    // }
-    // catch (IndexOutOfBoundsException e) {
-    //   System.out.println(e);
-    // }
-    // Integer num = 11;
-    // System.out.println("Removing by value, trying to remove 11, should print true: " + list.remove(num));
-    // System.out.println("Current list: " + list);
-    // num = 100;
-    // System.out.println("Trying to remove value 100, should print false: " + list.remove(num));
-    // System.out.println("Current list: " + list);
-    // System.out.println();
-    // System.out.println();
-    // System.out.println("--------- END OF TEST ----------");
+    System.out.println("---- Testing remove methods ----");
+    System.out.println();
+    System.out.println("Current list: " + list);
+    System.out.println("Remove 0th index should print 0: " + list.remove(0));
+    System.out.println("Current list: " + list);
+    System.out.print("Removing -1th index, should print an error: ");
+    try {
+      list.remove(-1);
+    }
+    catch (IndexOutOfBoundsException e) {
+      System.out.println(e);
+    }
+    Integer num = 11;
+    System.out.println("Removing by value, trying to remove 11, should print true: " + list.remove(num));
+    System.out.println("Current list: " + list);
+    num = 100;
+    System.out.println("Trying to remove value 100, should print false: " + list.remove(num));
+    System.out.println("Current list: " + list);
+    System.out.println();
+    System.out.println();
+    System.out.println("--------- END OF TEST ----------");
 
   }
 
