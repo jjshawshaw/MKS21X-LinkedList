@@ -60,7 +60,6 @@ class MyLinkedList{
   return current;
  }
 
- //Incomplete methods
  public boolean contains(Integer value){
    boolean out = false;
    Node current = start;
@@ -72,9 +71,31 @@ class MyLinkedList{
  }
 
  int indexOf(Integer value){
-   return 0;
+   Node current = start;
+    for (int i = 0; i < length; i++){
+        if (current.getData() == value) return i;
+        current = current.next();
+     }
+    return -1;
  }
- public void add(int index,Integer value){
+
+  //Incomplete methods
+ public void add(int index, Integer value){
+   if (index == 0){
+     Node newN = new Node(value, start, null);
+     start.setPrev(newN);
+     start = newN;
+   }
+   else if (index == length){
+     add(value);
+   }
+   else {
+     Node oldN = getNth(index);
+     Node newN = new Node(value, oldN, oldN.prev());
+     oldN.prev().setNext(newN);
+     oldN.setPrev(newN);
+
+   }
  }
  public boolean remove(int index) {
    return false;

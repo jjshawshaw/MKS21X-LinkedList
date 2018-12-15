@@ -64,28 +64,30 @@ public class AditiDriver {
     System.out.println();
     System.out.println("list.contains(6) should print true: " + list.contains(6));
     System.out.println("list.contains(70) should print false: " + list.contains(70));
-    // System.out.println("list.indexOf(4) should print 3: " + list.indexOf(4));
-    // System.out.println("list.indexOf(50) should print -1: " + list.indexOf(50));
-    // System.out.println();
-    // System.out.println();
-    //
-    // System.out.println("---- Testing add(index, value) ----");
-    // System.out.println();
-    // System.out.println("Current list: " + list);
-    // System.out.print("Add to -1th index, should print an error: ");
-    // try {
-    //   list.add(-1, 0);
-    // }
-    // catch (IndexOutOfBoundsException e) {
-    //   System.out.println(e);
-    // }
-    // list.add(0, 0);
-    // System.out.println("Add 0 to the 0th index: " + list);
-    // list.add(10, 11);
-    // System.out.println("Add 11 to the 10th index: " + list);
-    // System.out.println();
-    // System.out.println();
-    //
+    System.out.println("list.indexOf(4) should print 3: " + list.indexOf(4));
+    System.out.println("list.indexOf(50) should print -1: " + list.indexOf(50));
+    System.out.println();
+    System.out.println();
+
+    System.out.println("---- Testing add(index, value) ----");
+    System.out.println();
+    System.out.println("Current list: " + list);
+    System.out.print("Add to -1th index, should print an error: ");
+    try {
+      list.add(-1, 0);
+    }
+    catch (IndexOutOfBoundsException e) {
+      System.out.println(e);
+    }
+    list.add(0, 0);
+    System.out.println("Add 0 to the 0th index: " + list);
+    list.add(10, 11);
+    System.out.println("Add 11 to the 10th index: " + list);
+    System.out.println();
+    list.add(3, 5);
+    System.out.println("Add 5 to the 3rd index: " + list);
+    System.out.println();
+
     // System.out.println("---- Testing remove methods ----");
     // System.out.println();
     // System.out.println("Current list: " + list);
