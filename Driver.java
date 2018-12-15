@@ -9,5 +9,7 @@ public class Driver{
     System.out.println(L.get(1));
     System.out.println(L.set(1, 5));
     System.out.println(L);
+    System.out.println(L.contains(8));
+    System.out.println(L.contains(5));
   }
 }

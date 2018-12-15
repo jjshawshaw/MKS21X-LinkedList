@@ -16,7 +16,6 @@ class MyLinkedList{
    return length;
  }
 
-//Incomplete methods
  public boolean add(int value){
    if (length == 0){
      end = new Node(value, null, null);
@@ -49,6 +48,7 @@ class MyLinkedList{
  public Integer set(int index,Integer value){
    return getNth(index).setData(value);
  }
+
  private Node getNth(int index){
    Node current = start;
     for (int i = index; i > 0; i--){
@@ -56,9 +56,18 @@ class MyLinkedList{
      }
   return current;
  }
+
+ //Incomplete methods
  public boolean contains(Integer value){
-   return false;
+   boolean out = false;
+   Node current = start;
+    for (int i = 0; i < length; i++){
+        if (current.getData() == value) out = true;
+        current = current.next();
+     }
+    return out;
  }
+ 
  public void add(int index,Integer value){
  }
  public boolean remove(int index) {
