@@ -33,11 +33,13 @@ class MyLinkedList{
 
  public String toString(){
    Node current = start;
-   String out = "";
+   String out = "[";
    while (current != null){
-     out += current + " ";
+     out += current + "";
+     if (current.next() != null) out += ", ";
      current = current.next();
    }
+   out += "]";
    return out;
  }
 
@@ -50,6 +52,7 @@ class MyLinkedList{
  }
 
  private Node getNth(int index){
+   if (index < 0 || length < index) throw new IndexOutOfBoundsException();
    Node current = start;
     for (int i = index; i > 0; i--){
         current = current.next();
@@ -67,7 +70,10 @@ class MyLinkedList{
      }
     return out;
  }
- 
+
+ int indexOf(Integer value){
+   return 0;
+ }
  public void add(int index,Integer value){
  }
  public boolean remove(int index) {
