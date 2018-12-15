@@ -7,5 +7,7 @@ public class Driver{
     L.add(4);
     System.out.println(L);
     System.out.println(L.get(1));
+    System.out.println(L.set(1, 5));
+    System.out.println(L);
   }
 }

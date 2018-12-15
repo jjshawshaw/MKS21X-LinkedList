@@ -45,9 +45,9 @@ class MyLinkedList{
  public Integer get(int index) {
     return getNth(index).getData();
   }
-  
+
  public Integer set(int index,Integer value){
-   return 0;
+   return getNth(index).setData(value);
  }
  private Node getNth(int index){
    Node current = start;
@@ -94,8 +94,10 @@ class MyLinkedList{
    public Integer getData(){
      return data;
    }
-   public void setData(Integer i){
+   public Integer setData(Integer i){
+     int temp = data;
      data = i;
+     return temp;
    }
    public String toString(){
      return "" + data;
