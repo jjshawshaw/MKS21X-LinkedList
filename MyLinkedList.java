@@ -99,28 +99,41 @@ class MyLinkedList{
 
    }
  }
- public boolean remove(int index) {
-   if (index < 0 || length < index) return false;
+
+ public Integer remove(int index) {
+   if (index < 0 || length < index) throw new IndexOutOfBoundsException();
    if (index == 0){
+     int temp = start.getData();
      start.next.setPrev(null);
      start = start.next();
      length--;
+     return temp;
    }
    else if (index == length - 1){
+     int temp = end.getData();
      end.prev.setNext(null);
      end = end.prev();
      length--;
+     return temp;
    }
    else {
      Node n = getNth(index);
+     int temp = n.getData();
      n.prev.setNext(n.next());
      n.next.setPrev(n.prev());
      length--;
+     return temp;
    }
-   return true;
  }
+
  public boolean remove(Integer value){
-   return remove(indexOf(value));
+   try {
+     remove(indexOf(value));
+     return true;
+   }
+   catch (IndexOutOfBoundsException e){
+     return false;
+   }
  }
 
  //Node class
