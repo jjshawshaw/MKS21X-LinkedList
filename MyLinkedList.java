@@ -79,7 +79,6 @@ class MyLinkedList{
     return -1;
  }
 
-  //Incomplete methods
  public void add(int index, Integer value){
    if (index == 0){
      Node newN = new Node(value, start, null);
@@ -135,6 +134,14 @@ class MyLinkedList{
      return false;
    }
  }
+
+   public void extend(MyLinkedList other){
+      end.setNext(other.start);
+      length += other.length;
+      other.length = 0;
+      other.start = null;
+      other.end = null;
+    }
 
  //Node class
  private class Node{
